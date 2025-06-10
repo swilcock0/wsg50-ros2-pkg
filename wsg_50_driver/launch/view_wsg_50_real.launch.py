@@ -12,7 +12,7 @@ from launch_ros.parameter_descriptions import ParameterFile
 
 def generate_launch_description():
     
-    urdf_file = os.path.join(get_package_share_directory('wsg_50_simulation'),'urdf','wsg50.urdf.xacro')
+    urdf_file = os.path.join(get_package_share_directory('wsg_50_simulation'),'urdf','wsg_50.urdf')
     rviz_config_file = os.path.join(get_package_share_directory('wsg_50_simulation'),'rviz','wsg50.rviz')
     controller_file=os.path.join(get_package_share_directory('wsg_50_driver'),'config','controller.yaml')
 
@@ -21,13 +21,13 @@ def generate_launch_description():
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             urdf_file,
-            " "
-            "real_hardware:=",
-            "true",
-            " ",
-            "sim_standalone:=",
-            "false",
-            " ",
+            # " "
+            # "real_hardware:=",
+            # "true",
+            # " ",
+            # "sim_standalone:=",
+            # "false",
+            # " ",
         ]
     )
 
@@ -48,7 +48,7 @@ def generate_launch_description():
     )
     driver = Node(
         package='wsg_50_driver',
-        executable='wsg_50_driver',
+        executable='wsg_50_driver_node',
         output='both',
     )
     # RVIZ

@@ -725,17 +725,8 @@ class WSG50Node : public rclcpp::Node{
                 g_pub_state->publish(status_msg);
                 current_width_ = status_msg.width;
 
-                joint_states.header.stamp = rclcpp::Clock().now();
-                // joint_states.position[0] = status_msg.width/2000.0;
-                // joint_states.position[1] = status_msg.width/2000.0;
-                // joint_states.velocity[0] = status_msg.speed/1000.0;
-                // joint_states.velocity[1] = status_msg.speed/1000.0;
-                // joint_states.effort[0] = status_msg.force;
-                // joint_states.effort[1] = status_msg.force;
-                joint_states.position[0] = status_msg.width/1000.0;
-                joint_states.velocity[0] = status_msg.speed/1000.0;
-                joint_states.effort[0] = status_msg.force;
-                g_pub_joint->publish(joint_states);
+                // Publish joint states
+                publishJointStates();
 
                 // Check # of received messages regularly
                 std::chrono::duration<float> t = std::chrono::system_clock::now() - time_start;
@@ -847,6 +838,35 @@ class WSG50Node : public rclcpp::Node{
                     release(width, speed, true);
                     break;
             }
+        }
+
+        void publishJointStates() {
+            auto joint_state = sensor_msgs::msg::JointState();
+            joint_state.header.stamp = this->get_clock()->now();
+            
+            // Add all joint names from your URDF
+            joint_state.name = {
+                "base_joint_gripper_left", 
+                "base_joint_gripper_right",
+                "guide_joint_finger_left",
+                "guide_joint_finger_right"
+            };
+            
+            // Calculate positions based on current gripper width
+            double left_pos = -current_width_ / 2000.0;  // Convert mm to m and negate for left
+            double right_pos = current_width_ / 2000.0;   // Convert mm to m for right
+            
+            joint_state.position = {
+                left_pos,    // base_joint_gripper_left
+                right_pos,   // base_joint_gripper_right  
+                0.0,         // guide_joint_finger_left (fixed joint)
+                0.0          // guide_joint_finger_right (fixed joint)
+            };
+            
+            joint_state.velocity = {0.0, 0.0, 0.0, 0.0};
+            joint_state.effort = {0.0, 0.0, 0.0, 0.0};
+            
+            g_pub_joint->publish(joint_state);
         }
 
         // ...existing methods...

@@ -7,6 +7,9 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
+        - /TF1
+        - /TF1/Frames1
+        - /TF1/Tree1
       Splitter Ratio: 0.5
     Tree Height: 555
   - Class: rviz_common/Selection
@@ -70,44 +73,31 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        wsg50_base_link:
+          Value: true
+        finger_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wsg50_center:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wsg50_finger_left:
+        finger_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wsg50_finger_right:
+        gripper_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        gripper_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wsg50_gripper_left:
+        gripper_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wsg50_gripper_right:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wsg50_mounting_plate:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wsg50_width:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Mass Properties:
         Inertia: false
         Mass: false
@@ -116,10 +106,43 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base_link:
+          Value: true
+        finger_left:
+          Value: false
+        finger_right:
+          Value: false
+        gripper_base:
+          Value: true
+        gripper_left:
+          Value: false
+        gripper_right:
+          Value: false
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        gripper_base:
+          base_link:
+            gripper_left:
+              finger_left:
+                {}
+            gripper_right:
+              finger_right:
+                {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: gripper_base
     Frame Rate: 30
   Name: root
   Tools:
@@ -162,25 +185,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 0.41648995876312256
+      Distance: 0.3494868874549866
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.005272905342280865
-        Y: -0.054918013513088226
-        Z: 0.17761485278606415
+        X: -0.008550570346415043
+        Y: -0.007532497867941856
+        Z: 0.022831013426184654
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3653982877731323
+      Pitch: 0.08539807051420212
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.423573970794678
+      Yaw: 4.6585845947265625
     Saved: ~
 Window Geometry:
   Displays:
@@ -198,5 +221,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1200
-  X: 352
-  Y: 175
+  X: 192
+  Y: 15
