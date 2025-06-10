@@ -1,9 +1,0 @@
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/uninstall.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/wsg_50_simulation_uninstall.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/test.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/edit_cache.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/rebuild_cache.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/list_install_components.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/install.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/install/local.dir
-/home/sam/wsg50/build/wsg_50_simulation/CMakeFiles/install/strip.dir

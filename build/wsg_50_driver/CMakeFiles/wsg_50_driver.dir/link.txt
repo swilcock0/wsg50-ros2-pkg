@@ -1,2 +1,0 @@
-/usr/bin/ar qc libwsg_50_driver.a CMakeFiles/wsg_50_driver.dir/src/checksum.cpp.o CMakeFiles/wsg_50_driver.dir/src/cmd.c.o CMakeFiles/wsg_50_driver.dir/src/common.cpp.o CMakeFiles/wsg_50_driver.dir/src/functions.cpp.o CMakeFiles/wsg_50_driver.dir/src/interface.cpp.o CMakeFiles/wsg_50_driver.dir/src/msg.c.o CMakeFiles/wsg_50_driver.dir/src/tcp.c.o CMakeFiles/wsg_50_driver.dir/src/udp.c.o CMakeFiles/wsg_50_driver.dir/src/serial.c.o
-/usr/bin/ranlib libwsg_50_driver.a
