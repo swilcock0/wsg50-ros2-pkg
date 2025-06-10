@@ -1,0 +1,11 @@
+{
+  "package_name": "wsg_50_common",
+  "non_idl_tuples": [
+    "/home/sam/wsg50/src/wsg_50_common:msg/Cmd.msg",
+    "/home/sam/wsg50/src/wsg_50_common:msg/Status.msg",
+    "/home/sam/wsg50/src/wsg_50_common:srv/Conf.srv",
+    "/home/sam/wsg50/src/wsg_50_common:srv/Incr.srv",
+    "/home/sam/wsg50/src/wsg_50_common:srv/Move.srv",
+    "/home/sam/wsg50/src/wsg_50_common:action/Cmd.action"
+  ]
+}

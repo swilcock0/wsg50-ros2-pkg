@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from wsg_50_common/srv/Move.srv
+// generated code does not contain a copyright notice
+
+
+module wsg_50_common {
+  module srv {
+    struct Move_Request {
+      float width;
+
+      float speed;
+    };
+    struct Move_Response {
+      uint8 error;
+    };
+  };
+};

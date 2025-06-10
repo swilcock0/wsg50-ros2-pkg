@@ -1,0 +1,4 @@
+Invoking command in '/home/sam/wsg50/build/wsg_50_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/sam/wsg50/build/wsg_50_common -- -j8 -l8
+Invoked command in '/home/sam/wsg50/build/wsg_50_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/sam/wsg50/build/wsg_50_common -- -j8 -l8
+Invoking command in '/home/sam/wsg50/build/wsg_50_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/sam/wsg50/build/wsg_50_common
+Invoked command in '/home/sam/wsg50/build/wsg_50_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/sam/wsg50/build/wsg_50_common

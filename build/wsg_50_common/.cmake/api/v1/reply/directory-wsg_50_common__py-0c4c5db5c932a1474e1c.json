@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "wsg_50_common__py",
+		"source" : "/home/sam/wsg50/build/wsg_50_common/wsg_50_common__py"
+	}
+}

@@ -1,0 +1,47 @@
+[35m[1mConsolidate compiler generated dependencies of target wsg_50_driver_node[0m
+[ 47%] Built target wsg_50_driver
+[ 52%] [32mBuilding CXX object CMakeFiles/wsg_50_driver_node.dir/src/main.cpp.o[0m
+[ 57%] [32m[1mLinking CXX executable wsg_50_driver_node[0m
+[100%] Built target wsg_50_driver_node
+-- Install configuration: ""
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/environment/library_path.sh
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/environment/library_path.dsv
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/interface.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/char.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/aux_.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/udp.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/checksum.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/common.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/functions.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/tcp.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/msg.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/serial.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/functions_can.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/include/wsg_50_driver/cmd.h
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/lib/libwsg_50_driver.a
+-- Installing: /home/sam/wsg50/install/wsg_50_driver/lib/wsg_50_driver/wsg_50_driver_node
+-- Set runtime path of "/home/sam/wsg50/install/wsg_50_driver/lib/wsg_50_driver/wsg_50_driver_node" to ""
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/launch
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/launch/view_wsg_50_real.launch.py
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/config
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/config/wsg50_setup.yaml
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/config/controller.yaml
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/ament_index/resource_index/package_run_dependencies/wsg_50_driver
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/ament_index/resource_index/parent_prefix_path/wsg_50_driver
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/environment/ament_prefix_path.sh
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/environment/path.sh
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/environment/path.dsv
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/local_setup.bash
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/local_setup.sh
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/local_setup.zsh
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/local_setup.dsv
+-- Installing: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/package.dsv
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/ament_index/resource_index/packages/wsg_50_driver
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/cmake/wsg_50_driverExport.cmake
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/cmake/wsg_50_driverExport-noconfig.cmake
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/cmake/wsg_50_driverConfig.cmake
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/cmake/wsg_50_driverConfig-version.cmake
+-- Up-to-date: /home/sam/wsg50/install/wsg_50_driver/share/wsg_50_driver/package.xml

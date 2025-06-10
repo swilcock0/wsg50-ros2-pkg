@@ -1,0 +1,6 @@
+/home/sam/wsg50/build/wsg_50_common/rosidl_adapter/wsg_50_common:msg/Cmd.idl
+/home/sam/wsg50/build/wsg_50_common/rosidl_adapter/wsg_50_common:msg/Status.idl
+/home/sam/wsg50/build/wsg_50_common/rosidl_adapter/wsg_50_common:srv/Conf.idl
+/home/sam/wsg50/build/wsg_50_common/rosidl_adapter/wsg_50_common:srv/Incr.idl
+/home/sam/wsg50/build/wsg_50_common/rosidl_adapter/wsg_50_common:srv/Move.idl
+/home/sam/wsg50/build/wsg_50_common/rosidl_adapter/wsg_50_common:action/Cmd.idl

@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from wsg_50_common/srv/Incr.srv
+// generated code does not contain a copyright notice
+
+
+module wsg_50_common {
+  module srv {
+    struct Incr_Request {
+      string direction;
+
+      float increment;
+    };
+    struct Incr_Response {
+      uint8 error;
+    };
+  };
+};

@@ -1,0 +1,10 @@
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/uninstall.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/wsg_50_interface_uninstall.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/wsg_50_interface.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/test.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/edit_cache.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/rebuild_cache.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/list_install_components.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/install.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/install/local.dir
+/home/sam/wsg50/build/wsg_50_interface/CMakeFiles/install/strip.dir

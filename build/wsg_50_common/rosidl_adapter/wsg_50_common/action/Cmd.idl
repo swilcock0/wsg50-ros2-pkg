@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from wsg_50_common/action/Cmd.action
+// generated code does not contain a copyright notice
+
+
+module wsg_50_common {
+  module action {
+    struct Cmd_Goal {
+      @verbatim (language="comment", text=
+        "Mode of operation")
+      int32 mode;
+
+      @verbatim (language="comment", text=
+        "Possible values for mode:" "\n"
+        "0: MODE_MOVE" "\n"
+        "1: MODE_GRASP" "\n"
+        "2: MODE_RELEASE" "\n"
+        "Width of the gripper")
+      float width;
+
+      @verbatim (language="comment", text=
+        "Speed of the gripper")
+      float speed;
+    };
+    struct Cmd_Result {
+      @verbatim (language="comment", text=
+        "Result of the command")
+      boolean result;
+    };
+    struct Cmd_Feedback {
+      @verbatim (language="comment", text=
+        "Current position of the gripper")
+      float position;
+    };
+  };
+};

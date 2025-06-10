@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-613f38a69785202f658c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "wsg_50_common__py",
+					"jsonFile" : "directory-wsg_50_common__py-0c4c5db5c932a1474e1c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/sam/wsg50/build/wsg_50_common/wsg_50_common__py",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "wsg_50_common",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_wsg_50_common_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_wsg_50_common_egg-21589ba975b4495fe331.json",
+					"name" : "ament_cmake_python_build_wsg_50_common_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_wsg_50_common::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_wsg_50_common-e2bc456673c36337ad34.json",
+					"name" : "ament_cmake_python_copy_wsg_50_common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-4749d7e37663643decb7.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common-230293bbaae7892d4ace.json",
+					"name" : "wsg_50_common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__cpp-eb6e53a00bbd374dafe2.json",
+					"name" : "wsg_50_common__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "wsg_50_common__py::@c97c28d9934a576bb1ae",
+					"jsonFile" : "target-wsg_50_common__py-6ed7c90362b26f24521c.json",
+					"name" : "wsg_50_common__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_generator_c-b2b2c71effb91f51469f.json",
+					"name" : "wsg_50_common__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_generator_py-9d460977700a52a506ba.json",
+					"name" : "wsg_50_common__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_c-7d55dbbab8babf23d879.json",
+					"name" : "wsg_50_common__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_c__pyext-8c6ce24e54975f2b3d15.json",
+					"name" : "wsg_50_common__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_cpp-f5765ebf07f383552f1b.json",
+					"name" : "wsg_50_common__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_fastrtps_c-1c1f3cc2e37ca97d0482.json",
+					"name" : "wsg_50_common__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_fastrtps_c__pyext-9d0178b27e0b1cccb038.json",
+					"name" : "wsg_50_common__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_fastrtps_cpp-bb76eeb8b28a98953c7a.json",
+					"name" : "wsg_50_common__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_introspection_c-9c4bb84f9ef03cda3f74.json",
+					"name" : "wsg_50_common__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_introspection_c__pyext-3870bc3db6756c5798e6.json",
+					"name" : "wsg_50_common__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common__rosidl_typesupport_introspection_cpp-8fcca94fac9fbfd61d5d.json",
+					"name" : "wsg_50_common__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wsg_50_common_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wsg_50_common_uninstall-8a27d0d1eca27f662d52.json",
+					"name" : "wsg_50_common_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sam/wsg50/build/wsg_50_common",
+		"source" : "/home/sam/wsg50/src/wsg_50_common"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

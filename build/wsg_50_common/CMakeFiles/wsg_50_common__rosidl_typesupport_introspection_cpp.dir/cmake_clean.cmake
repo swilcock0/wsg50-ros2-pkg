@@ -1,0 +1,33 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/action/detail/cmd__type_support.cpp.o"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/action/detail/cmd__type_support.cpp.o.d"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/cmd__type_support.cpp.o"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/cmd__type_support.cpp.o.d"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/status__type_support.cpp.o"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/status__type_support.cpp.o.d"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/conf__type_support.cpp.o"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/conf__type_support.cpp.o.d"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/incr__type_support.cpp.o"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/incr__type_support.cpp.o.d"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/move__type_support.cpp.o"
+  "CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/move__type_support.cpp.o.d"
+  "libwsg_50_common__rosidl_typesupport_introspection_cpp.pdb"
+  "libwsg_50_common__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/action/detail/cmd__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/action/detail/cmd__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/cmd__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/cmd__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/status__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/conf__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/conf__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/incr__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/incr__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/move__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/move__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

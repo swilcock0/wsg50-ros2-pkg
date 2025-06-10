@@ -1,0 +1,415 @@
+[0.070s] Invoking command in '/home/sam/wsg50/build/wsg_50_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/wsg_50/install/wsg_ctrl:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake /home/sam/wsg50/src/wsg_50_common -DCMAKE_INSTALL_PREFIX=/home/sam/wsg50/install/wsg_50_common
+[0.533s] -- The C compiler identification is GNU 11.4.0
+[1.588s] -- The CXX compiler identification is GNU 11.4.0
+[2.327s] -- Detecting C compiler ABI info
+[2.715s] -- Detecting C compiler ABI info - done
+[2.735s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.735s] -- Detecting C compile features
+[2.736s] -- Detecting C compile features - done
+[2.743s] -- Detecting CXX compiler ABI info
+[3.147s] -- Detecting CXX compiler ABI info - done
+[3.163s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.164s] -- Detecting CXX compile features
+[3.165s] -- Detecting CXX compile features - done
+[3.192s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.658s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.143s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[4.729s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.776s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.840s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.913s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.011s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.121s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[5.989s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[6.873s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.316s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.677s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[7.697s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[8.999s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[8.999s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[8.999s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[8.999s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[9.056s] -- Found PythonExtra: .so  
+[9.438s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.603s] -- Added test 'lint_cmake' to check CMake code style
+[9.610s] -- Added test 'xmllint' to check XML markup files
+[9.622s] -- Configuring done
+[9.767s] -- Generating done
+[9.792s] -- Build files have been written to: /home/sam/wsg50/build/wsg_50_common
+[9.810s] Invoked command in '/home/sam/wsg50/build/wsg_50_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/wsg_50/install/wsg_ctrl:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake /home/sam/wsg50/src/wsg_50_common -DCMAKE_INSTALL_PREFIX=/home/sam/wsg50/install/wsg_50_common
+[9.814s] Invoking command in '/home/sam/wsg50/build/wsg_50_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/wsg_50/install/wsg_ctrl:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/sam/wsg50/build/wsg_50_common -- -j8 -l8
+[9.967s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[10.003s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.039s] [  2%] Built target ament_cmake_python_copy_wsg_50_common
+[10.708s] running egg_info
+[10.709s] creating wsg_50_common.egg-info
+[10.710s] writing wsg_50_common.egg-info/PKG-INFO
+[10.711s] writing dependency_links to wsg_50_common.egg-info/dependency_links.txt
+[10.711s] writing top-level names to wsg_50_common.egg-info/top_level.txt
+[10.712s] writing manifest file 'wsg_50_common.egg-info/SOURCES.txt'
+[10.718s] reading manifest file 'wsg_50_common.egg-info/SOURCES.txt'
+[10.719s] writing manifest file 'wsg_50_common.egg-info/SOURCES.txt'
+[10.787s] [  2%] Built target ament_cmake_python_build_wsg_50_common_egg
+[11.984s] [  2%] Built target wsg_50_common__cpp
+[12.036s] [  4%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[12.037s] [  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[12.037s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[12.117s] [  8%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_c.dir/rosidl_generator_c/wsg_50_common/srv/detail/move__functions.c.o[0m
+[12.117s] [  9%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_c.dir/rosidl_generator_c/wsg_50_common/msg/detail/cmd__functions.c.o[0m
+[12.119s] [ 11%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_c.dir/rosidl_generator_c/wsg_50_common/srv/detail/incr__functions.c.o[0m
+[12.121s] [ 12%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_c.dir/rosidl_generator_c/wsg_50_common/msg/detail/status__functions.c.o[0m
+[12.128s] [ 14%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_c.dir/rosidl_generator_c/wsg_50_common/srv/detail/conf__functions.c.o[0m
+[12.361s] [ 15%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_c.dir/rosidl_generator_c/wsg_50_common/action/detail/cmd__functions.c.o[0m
+[12.734s] [ 16%] [32m[1mLinking C shared library libwsg_50_common__rosidl_generator_c.so[0m
+[13.158s] [ 16%] Built target wsg_50_common__rosidl_generator_c
+[13.214s] [ 19%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[13.214s] [ 19%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[13.217s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[13.697s] [ 22%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wsg_50_common/msg/cmd__type_support.cpp.o[0m
+[13.697s] [ 23%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wsg_50_common/msg/status__type_support.cpp.o[0m
+[13.745s] [ 25%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wsg_50_common/srv/conf__type_support.cpp.o[0m
+[14.696s] [ 26%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/cmd__type_support.cpp.o[0m
+[14.768s] [ 28%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wsg_50_common/srv/incr__type_support.cpp.o[0m
+[14.771s] [ 29%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wsg_50_common/srv/move__type_support.cpp.o[0m
+[15.000s] [ 30%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/msg/detail/status__type_support.cpp.o[0m
+[15.380s] [ 33%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wsg_50_common/msg/detail/dds_fastrtps/cmd__type_support.cpp.o[0m
+[15.384s] [ 33%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_c.dir/rosidl_typesupport_c/wsg_50_common/msg/cmd__type_support.cpp.o[0m
+[15.524s] [ 35%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_c.dir/rosidl_typesupport_c/wsg_50_common/msg/status__type_support.cpp.o[0m
+[15.664s] [ 36%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_c.dir/rosidl_typesupport_c/wsg_50_common/srv/conf__type_support.cpp.o[0m
+[15.753s] [ 38%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/conf__type_support.cpp.o[0m
+[15.773s] [ 39%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wsg_50_common/action/cmd__type_support.cpp.o[0m
+[15.874s] [ 40%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_c.dir/rosidl_typesupport_c/wsg_50_common/srv/incr__type_support.cpp.o[0m
+[16.201s] [ 42%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_c.dir/rosidl_typesupport_c/wsg_50_common/srv/move__type_support.cpp.o[0m
+[16.407s] [ 43%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wsg_50_common/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[16.452s] [ 45%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_c.dir/rosidl_typesupport_c/wsg_50_common/action/cmd__type_support.cpp.o[0m
+[16.721s] [ 46%] [32m[1mLinking CXX shared library libwsg_50_common__rosidl_typesupport_c.so[0m
+[16.776s] [ 47%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wsg_50_common/msg/detail/cmd__type_support.c.o[0m
+[16.948s] [ 49%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wsg_50_common/srv/detail/dds_fastrtps/conf__type_support.cpp.o[0m
+[16.992s] [ 50%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wsg_50_common/msg/detail/status__type_support.c.o[0m
+[17.209s] [ 52%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wsg_50_common/msg/detail/cmd__type_support_c.cpp.o[0m
+[17.290s] [ 53%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wsg_50_common/srv/detail/conf__type_support.c.o[0m
+[17.516s] [ 54%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wsg_50_common/srv/detail/incr__type_support.c.o[0m
+[17.730s] [ 56%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wsg_50_common/srv/detail/move__type_support.c.o[0m
+[17.777s] [ 56%] Built target wsg_50_common__rosidl_typesupport_c
+[17.786s] [ 57%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/incr__type_support.cpp.o[0m
+[17.863s] [ 59%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wsg_50_common/msg/detail/status__type_support_c.cpp.o[0m
+[17.933s] [ 60%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wsg_50_common/srv/detail/dds_fastrtps/incr__type_support.cpp.o[0m
+[18.136s] [ 61%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wsg_50_common/action/detail/cmd__type_support.c.o[0m
+[18.466s] [ 63%] [32m[1mLinking C shared library libwsg_50_common__rosidl_typesupport_introspection_c.so[0m
+[18.503s] [ 64%] [32m[1mLinking CXX shared library libwsg_50_common__rosidl_typesupport_cpp.so[0m
+[18.662s] [ 66%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wsg_50_common/srv/detail/conf__type_support_c.cpp.o[0m
+[19.011s] [ 67%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wsg_50_common/srv/detail/incr__type_support_c.cpp.o[0m
+[19.078s] [ 67%] Built target wsg_50_common__rosidl_typesupport_introspection_c
+[19.104s] [ 67%] Built target wsg_50_common__rosidl_typesupport_cpp
+[19.135s] [ 69%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/srv/detail/move__type_support.cpp.o[0m
+[19.145s] [ 70%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wsg_50_common/srv/detail/dds_fastrtps/move__type_support.cpp.o[0m
+[19.170s] [ 71%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wsg_50_common/action/detail/dds_fastrtps/cmd__type_support.cpp.o[0m
+[19.556s] [ 73%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wsg_50_common/action/detail/cmd__type_support.cpp.o[0m
+[19.778s] [ 74%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wsg_50_common/srv/detail/move__type_support_c.cpp.o[0m
+[19.979s] [ 76%] [32mBuilding CXX object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wsg_50_common/action/detail/cmd__type_support_c.cpp.o[0m
+[21.460s] [ 77%] [32m[1mLinking CXX shared library libwsg_50_common__rosidl_typesupport_fastrtps_cpp.so[0m
+[21.471s] [ 78%] [32m[1mLinking CXX shared library libwsg_50_common__rosidl_typesupport_fastrtps_c.so[0m
+[21.664s] [ 80%] [32m[1mLinking CXX shared library libwsg_50_common__rosidl_typesupport_introspection_cpp.so[0m
+[21.954s] [ 80%] Built target wsg_50_common__rosidl_typesupport_fastrtps_c
+[21.957s] [ 80%] Built target wsg_50_common__rosidl_typesupport_fastrtps_cpp
+[22.120s] [ 80%] Built target wsg_50_common__rosidl_typesupport_introspection_cpp
+[22.206s] [ 80%] Built target wsg_50_common
+[22.292s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[25.229s] [ 81%] Built target wsg_50_common__py
+[25.319s] [ 83%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_py.dir/rosidl_generator_py/wsg_50_common/msg/_status_s.c.o[0m
+[25.320s] [ 84%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_py.dir/rosidl_generator_py/wsg_50_common/msg/_cmd_s.c.o[0m
+[25.323s] [ 85%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_py.dir/rosidl_generator_py/wsg_50_common/srv/_conf_s.c.o[0m
+[25.325s] [ 87%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_py.dir/rosidl_generator_py/wsg_50_common/srv/_incr_s.c.o[0m
+[25.326s] [ 88%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_py.dir/rosidl_generator_py/wsg_50_common/action/_cmd_s.c.o[0m
+[25.329s] [ 90%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_generator_py.dir/rosidl_generator_py/wsg_50_common/srv/_move_s.c.o[0m
+[25.766s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/wsg_50_common/libwsg_50_common__rosidl_generator_py.so[0m
+[26.103s] [ 91%] Built target wsg_50_common__rosidl_generator_py
+[26.191s] [ 92%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/wsg_50_common/_wsg_50_common_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[26.192s] [ 95%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/wsg_50_common/_wsg_50_common_s.ep.rosidl_typesupport_c.c.o[0m
+[26.192s] [ 95%] [32mBuilding C object CMakeFiles/wsg_50_common__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/wsg_50_common/_wsg_50_common_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[26.615s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/wsg_50_common/wsg_50_common_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[26.619s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/wsg_50_common/wsg_50_common_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[26.623s] [100%] [32m[1mLinking C shared library rosidl_generator_py/wsg_50_common/wsg_50_common_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[26.929s] [100%] Built target wsg_50_common__rosidl_typesupport_fastrtps_c__pyext
+[26.939s] [100%] Built target wsg_50_common__rosidl_typesupport_c__pyext
+[26.939s] [100%] Built target wsg_50_common__rosidl_typesupport_introspection_c__pyext
+[26.983s] Invoked command in '/home/sam/wsg50/build/wsg_50_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/wsg_50/install/wsg_ctrl:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --build /home/sam/wsg50/build/wsg_50_common -- -j8 -l8
+[26.989s] Invoking command in '/home/sam/wsg50/build/wsg_50_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/wsg_50/install/wsg_ctrl:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/sam/wsg50/build/wsg_50_common
+[27.017s] -- Install configuration: ""
+[27.021s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/ament_index/resource_index/rosidl_interfaces/wsg_50_common
+[27.022s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common
+[27.025s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg
+[27.026s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/status.h
+[27.026s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail
+[27.027s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__functions.c
+[27.028s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__struct.h
+[27.028s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__struct.h
+[27.028s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__type_support.h
+[27.029s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__type_support.h
+[27.029s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__functions.c
+[27.030s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__functions.h
+[27.030s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__functions.h
+[27.030s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/rosidl_generator_c__visibility_control.h
+[27.031s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/cmd.h
+[27.031s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv
+[27.032s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/conf.h
+[27.033s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/incr.h
+[27.033s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/move.h
+[27.033s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail
+[27.034s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__functions.h
+[27.034s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__functions.h
+[27.035s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__type_support.h
+[27.036s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__functions.c
+[27.037s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__functions.c
+[27.037s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__type_support.h
+[27.038s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__struct.h
+[27.038s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__struct.h
+[27.038s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__type_support.h
+[27.039s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__functions.c
+[27.039s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__functions.h
+[27.039s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__struct.h
+[27.040s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action
+[27.040s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail
+[27.041s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__functions.c
+[27.042s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__struct.h
+[27.042s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__type_support.h
+[27.042s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__functions.h
+[27.043s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/cmd.h
+[27.045s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/library_path.sh
+[27.045s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/library_path.dsv
+[27.047s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_generator_c.so
+[27.048s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_generator_c.so" to ""
+[27.049s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common
+[27.049s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg
+[27.049s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[27.050s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail
+[27.050s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+[27.050s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__rosidl_typesupport_fastrtps_c.h
+[27.051s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv
+[27.051s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail
+[27.051s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__rosidl_typesupport_fastrtps_c.h
+[27.051s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__rosidl_typesupport_fastrtps_c.h
+[27.052s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__rosidl_typesupport_fastrtps_c.h
+[27.053s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action
+[27.053s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail
+[27.053s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__rosidl_typesupport_fastrtps_c.h
+[27.053s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_fastrtps_c.so
+[27.054s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_fastrtps_c.so" to ""
+[27.054s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common
+[27.055s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg
+[27.055s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/cmd.hpp
+[27.056s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/status.hpp
+[27.056s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail
+[27.056s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__traits.hpp
+[27.057s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__type_support.hpp
+[27.057s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__builder.hpp
+[27.057s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__traits.hpp
+[27.058s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__struct.hpp
+[27.058s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__struct.hpp
+[27.059s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__builder.hpp
+[27.059s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__type_support.hpp
+[27.059s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/rosidl_generator_cpp__visibility_control.hpp
+[27.060s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv
+[27.060s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/incr.hpp
+[27.060s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/move.hpp
+[27.061s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail
+[27.061s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__traits.hpp
+[27.061s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__builder.hpp
+[27.062s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__struct.hpp
+[27.062s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__struct.hpp
+[27.062s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__type_support.hpp
+[27.063s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__builder.hpp
+[27.063s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__traits.hpp
+[27.063s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__type_support.hpp
+[27.063s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__builder.hpp
+[27.064s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__traits.hpp
+[27.064s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__type_support.hpp
+[27.064s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__struct.hpp
+[27.064s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/conf.hpp
+[27.065s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action
+[27.065s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/cmd.hpp
+[27.065s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail
+[27.065s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__traits.hpp
+[27.066s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__struct.hpp
+[27.066s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__builder.hpp
+[27.066s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__type_support.hpp
+[27.066s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common
+[27.066s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg
+[27.067s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[27.067s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail
+[27.067s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[27.068s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/dds_fastrtps
+[27.069s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+[27.070s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv
+[27.070s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail
+[27.071s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__rosidl_typesupport_fastrtps_cpp.hpp
+[27.071s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__rosidl_typesupport_fastrtps_cpp.hpp
+[27.071s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/dds_fastrtps
+[27.072s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__rosidl_typesupport_fastrtps_cpp.hpp
+[27.073s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action
+[27.073s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail
+[27.073s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[27.074s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/dds_fastrtps
+[27.074s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_fastrtps_cpp.so
+[27.075s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_fastrtps_cpp.so" to ""
+[27.075s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common
+[27.076s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg
+[27.076s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[27.077s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail
+[27.077s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__type_support.c
+[27.078s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__type_support.c
+[27.078s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__rosidl_typesupport_introspection_c.h
+[27.078s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__rosidl_typesupport_introspection_c.h
+[27.079s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv
+[27.079s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail
+[27.079s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__rosidl_typesupport_introspection_c.h
+[27.080s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__rosidl_typesupport_introspection_c.h
+[27.080s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__rosidl_typesupport_introspection_c.h
+[27.080s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__type_support.c
+[27.081s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__type_support.c
+[27.081s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__type_support.c
+[27.082s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action
+[27.082s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail
+[27.082s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__type_support.c
+[27.083s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__rosidl_typesupport_introspection_c.h
+[27.083s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_introspection_c.so
+[27.084s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_introspection_c.so" to ""
+[27.084s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_c.so
+[27.085s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_c.so" to ""
+[27.085s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common
+[27.086s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg
+[27.086s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail
+[27.087s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__type_support.cpp
+[27.087s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+[27.087s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/status__type_support.cpp
+[27.088s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/msg/detail/cmd__rosidl_typesupport_introspection_cpp.hpp
+[27.088s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv
+[27.088s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail
+[27.089s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__type_support.cpp
+[27.089s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/move__rosidl_typesupport_introspection_cpp.hpp
+[27.090s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__type_support.cpp
+[27.090s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__type_support.cpp
+[27.090s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/incr__rosidl_typesupport_introspection_cpp.hpp
+[27.090s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/srv/detail/conf__rosidl_typesupport_introspection_cpp.hpp
+[27.091s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action
+[27.091s] -- Up-to-date: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail
+[27.091s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__type_support.cpp
+[27.092s] -- Installing: /home/sam/wsg50/install/wsg_50_common/include/wsg_50_common/wsg_50_common/action/detail/cmd__rosidl_typesupport_introspection_cpp.hpp
+[27.092s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_introspection_cpp.so
+[27.092s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_introspection_cpp.so" to ""
+[27.092s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_cpp.so
+[27.093s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_typesupport_cpp.so" to ""
+[27.093s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/pythonpath.sh
+[27.093s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/pythonpath.dsv
+[27.094s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common-0.0.0-py3.10.egg-info
+[27.097s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common-0.0.0-py3.10.egg-info/dependency_links.txt
+[27.097s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common-0.0.0-py3.10.egg-info/PKG-INFO
+[27.097s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common-0.0.0-py3.10.egg-info/SOURCES.txt
+[27.097s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common-0.0.0-py3.10.egg-info/top_level.txt
+[27.098s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common
+[27.098s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/_wsg_50_common_s.ep.rosidl_typesupport_c.c
+[27.099s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[27.099s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/_wsg_50_common_s.ep.rosidl_typesupport_introspection_c.c
+[27.100s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg
+[27.101s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/_status.py
+[27.101s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/__init__.py
+[27.101s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/_cmd_s.c
+[27.102s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/_cmd.py
+[27.102s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/_status_s.c
+[27.102s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/__init__.py
+[27.102s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv
+[27.103s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_incr.py
+[27.104s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_conf_s.c
+[27.104s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_conf.py
+[27.104s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_move.py
+[27.105s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_move_s.c
+[27.105s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/__init__.py
+[27.105s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_incr_s.c
+[27.105s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/_wsg_50_common_s.ep.rosidl_typesupport_fastrtps_c.c
+[27.106s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/libwsg_50_common__rosidl_generator_py.so
+[27.106s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[27.107s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action
+[27.108s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action/__init__.py
+[27.108s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action/_cmd_s.c
+[27.108s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action/_cmd.py
+[27.109s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[27.220s] Listing '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common'...
+[27.220s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/__init__.py'...
+[27.220s] Listing '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action'...
+[27.220s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action/__init__.py'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/action/_cmd.py'...
+[27.221s] Listing '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/__init__.py'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/_cmd.py'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/msg/_status.py'...
+[27.221s] Listing '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/__init__.py'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_conf.py'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_incr.py'...
+[27.221s] Compiling '/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/srv/_move.py'...
+[27.229s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[27.230s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[27.231s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[27.232s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[27.233s] -- Installing: /home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[27.234s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/local/lib/python3.10/dist-packages/wsg_50_common/wsg_50_common_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[27.234s] -- Installing: /home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_generator_py.so
+[27.235s] -- Set runtime path of "/home/sam/wsg50/install/wsg_50_common/lib/libwsg_50_common__rosidl_generator_py.so" to ""
+[27.236s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/msg/Cmd.idl
+[27.237s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/msg/Status.idl
+[27.238s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Conf.idl
+[27.238s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Incr.idl
+[27.238s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Move.idl
+[27.239s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/action/Cmd.idl
+[27.240s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/msg/Cmd.msg
+[27.240s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/msg/Status.msg
+[27.240s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Conf.srv
+[27.241s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Conf_Request.msg
+[27.241s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Conf_Response.msg
+[27.241s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Incr.srv
+[27.242s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Incr_Request.msg
+[27.242s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Incr_Response.msg
+[27.243s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Move.srv
+[27.243s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Move_Request.msg
+[27.243s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/srv/Move_Response.msg
+[27.243s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/action/Cmd.action
+[27.244s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/ament_index/resource_index/package_run_dependencies/wsg_50_common
+[27.245s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/ament_index/resource_index/parent_prefix_path/wsg_50_common
+[27.246s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/ament_prefix_path.sh
+[27.246s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/ament_prefix_path.dsv
+[27.247s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/path.sh
+[27.247s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/environment/path.dsv
+[27.248s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/local_setup.bash
+[27.248s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/local_setup.sh
+[27.249s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/local_setup.zsh
+[27.249s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/local_setup.dsv
+[27.250s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/package.dsv
+[27.251s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/ament_index/resource_index/packages/wsg_50_common
+[27.252s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_generator_cExport.cmake
+[27.252s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_generator_cExport-noconfig.cmake
+[27.252s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_typesupport_fastrtps_cExport.cmake
+[27.253s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[27.253s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_generator_cppExport.cmake
+[27.254s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_typesupport_fastrtps_cppExport.cmake
+[27.254s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[27.254s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_introspection_cExport.cmake
+[27.255s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[27.255s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_cExport.cmake
+[27.255s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_cExport-noconfig.cmake
+[27.256s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_introspection_cppExport.cmake
+[27.256s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[27.256s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_cppExport.cmake
+[27.257s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_common__rosidl_typesupport_cppExport-noconfig.cmake
+[27.257s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_generator_pyExport.cmake
+[27.258s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/export_wsg_50_common__rosidl_generator_pyExport-noconfig.cmake
+[27.258s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/rosidl_cmake-extras.cmake
+[27.258s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.259s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.259s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/ament_cmake_export_libraries-extras.cmake
+[27.259s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/ament_cmake_export_targets-extras.cmake
+[27.260s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[27.260s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[27.261s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_commonConfig.cmake
+[27.261s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/cmake/wsg_50_commonConfig-version.cmake
+[27.261s] -- Installing: /home/sam/wsg50/install/wsg_50_common/share/wsg_50_common/package.xml
+[27.267s] Invoked command in '/home/sam/wsg50/build/wsg_50_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sam/wsg_50/install/wsg_ctrl:/home/sam/moveit2/install/moveit_configs_utils:/opt/ros/humble /usr/bin/cmake --install /home/sam/wsg50/build/wsg_50_common
