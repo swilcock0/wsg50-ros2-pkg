@@ -31,6 +31,12 @@ def generate_launch_description():
 
     robot_description = {"robot_description": robot_description_content}
 
+    driver = Node(
+        package='wsg_50_driver',
+        executable='wsg_50_driver',
+        output='both',
+    )
+
     # Robot state publisher
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -55,6 +61,7 @@ def generate_launch_description():
     )
     return LaunchDescription([
         node_robot_state_publisher,
+        driver,
         joint_state_publisher,
         rviz_node,
     ])

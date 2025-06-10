@@ -26,7 +26,7 @@ def generate_launch_description():
             "true",
             " ",
             "sim_standalone:=",
-            "true",
+            "false",
             " ",
         ]
     )
@@ -46,11 +46,11 @@ def generate_launch_description():
         output='both',
         parameters=[ParameterFile(controller_file)],
     )
-    # driver = Node(
-    #     package='wsg_50_driver',
-    #     executable='wsg_50_driver',
-    #     output='both',
-    # )
+    driver = Node(
+        package='wsg_50_driver',
+        executable='wsg_50_driver',
+        output='both',
+    )
     # RVIZ
 
     joint_state_broadcaster = Node(
@@ -74,7 +74,7 @@ def generate_launch_description():
     )
     return LaunchDescription([
         node_robot_state_publisher,
-        # driver,
+        driver,
         rviz_node,
         ros2_control_node,
         joint_state_broadcaster,
