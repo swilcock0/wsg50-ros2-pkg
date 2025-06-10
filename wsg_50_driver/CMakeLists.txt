@@ -80,6 +80,7 @@ install(TARGETS
 # Install Python scripts
 install(PROGRAMS
   scripts/wsg50_action_client.py
+  scripts/wsg50_gui_slider.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
