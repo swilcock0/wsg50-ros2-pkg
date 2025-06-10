@@ -1,0 +1,3 @@
+- [ ] Fix rviz visualisation
+- [ ] Integrate urdf as attachment to arm for collision checking
+- [ ] 

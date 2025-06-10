@@ -1,6 +1,6 @@
 # ROS Package for Schunk WSG-50 Gripper
 
-Forked from: [https://github.com/nalt/wsg50-ros-pkg](https://github.com/nalt/wsg50-ros-pkg)
+Forked from: [https://github.com/inria-paris-robotics-lab/wsg50-ros-pkg](https://github.com/inria-paris-robotics-lab/wsg50-ros-pkg)
 
 ![Schunk WSG-50 Gripper](doc/wsg.png)
 
@@ -42,6 +42,22 @@ To simulate the WSG-50 gripper in a standalone environment, use:
 ros2 launch wsg_50_simulation wsg_50.launch.py
 ```
 
+```bash
+ros2 run wsg_50_driver wsg_50_driver_node
+
+# Test move command
+ros2 topic pub --once /wsg50/move geometry_msgs/msg/Point "{x: 50.0, y: 100.0, z: 0.0}"
+
+# Test position command  
+ros2 topic pub --once /wsg50/move_position std_msgs/msg/Float64 "{data: 75.0}"
+```
+
+There's also an action server, demonstrated in wsg50_action_client.py
+```bash
+ros2 run wsg_50_driver wsg50_action_client.py
+```
+
+
 #### Launch the ROS 2 Node Driver with a Real Gripper
 To connect and control a real WSG-50 gripper, launch the ROS 2 node driver:
 ```bash
@@ -66,7 +82,7 @@ Ensure these parameters are correctly set to optimize the gripper's performance 
 #### Launch Visualization and Control with ROS 2 Control
 To visualize and control the gripper using ROS 2 Control, launch the following:
 ```bash
-ros2 launch wsg_50_driver wsg_50_control.launch.py
+ros2 launch wsg_50_driver view_wsg_50_real.launch.py
 ```
 
 ## ROS 2 Control Integration

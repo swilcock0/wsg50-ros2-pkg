@@ -77,6 +77,12 @@ install(TARGETS
   wsg_50_driver_node
   DESTINATION lib/${PROJECT_NAME})
 
+# Install Python scripts
+install(PROGRAMS
+  scripts/wsg50_action_client.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 install(
   DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
