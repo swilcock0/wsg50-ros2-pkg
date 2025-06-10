@@ -61,8 +61,12 @@ ros2 run wsg_50_driver wsg50_action_client.py
 #### Launch the ROS 2 Node Driver with a Real Gripper
 To connect and control a real WSG-50 gripper, launch the ROS 2 node driver:
 ```bash
-ros2 launch wsg_50_driver wsg_50_driver.launch.py ip:=<gripper_ip> port:=<gripper_port>
+ros2 launch wsg_50_driver view_wsg_50_real.launch.py
 ```
+
+![Schunk WSG-50 Gripper in RVIZ](doc/rviz.png)
+
+
 ### Real Hardware
 ---
 
