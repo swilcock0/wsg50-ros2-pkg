@@ -176,6 +176,7 @@
      <axis xyz="-1 0 0"/>
      <dynamics friction="100" damping="100" />
      <limit effort="100" velocity="100"/>
+     <mimic joint="base_joint_gripper_left" multiplier="-1" offset="0"/>
   </joint>
 
   <transmission name="base_trans_right" type="transmission_interface/SimpleTransmission">
@@ -319,5 +320,35 @@
     <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
   </plugin>-->
 
+  <!-- ROS2 Control for WSG-50 Gripper -->
+  <ros2_control name="wsg50_sim" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+    </hardware>
+    
+    <!-- Left gripper finger joint -->
+    <joint name="base_joint_gripper_left">
+      <command_interface name="position">
+        <param name="min">-0.055</param>
+        <param name="max">0.0</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">-0.027</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <!-- Right gripper finger joint -->
+    <joint name="base_joint_gripper_right">
+      <command_interface name="position">
+        <param name="min">0.000</param>
+        <param name="max">0.055</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.027</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
 
 </robot>

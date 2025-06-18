@@ -8,16 +8,16 @@
 <!-- finger_length: Length of finger from gripper base. (was 0.023) -->
 <!-- finger_tip:    Offset of finger tip along fingers' motion direction.
                     Use e.g. for single contact point tip on finger. (default 0) -->
-<xacro:macro name="wsg_50_xacro" params="name parent finger_length finger_tip *origin">
+<xacro:macro name="wsg_50_xacro" params="parent finger_length finger_tip *origin">
 
- <joint name="${name}_anterior_gripper_joint" type="fixed">
+ <joint name="wsg_50_anterior_gripper_joint" type="fixed">
     <insert_block name="origin"/>
     <parent link="${parent}"/>
-    <child link="${name}_base_link"/>
+    <child link="wsg_50_base_link"/>
  </joint>
 
 <!-- BASE LINK -->
- <link name="${name}_base_link">
+ <link name="wsg_50_base_link">
       <inertial>
           <mass value="1.3" />
           <origin xyz="0 0 0" />
@@ -47,40 +47,40 @@
      </collision>
   </link>
 
-  <gazebo reference="${name}_base_link">
+  <gazebo reference="wsg_50_base_link">
     <material>Gazebo/Grey</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
 
-  <joint name="${name}_center_joint" type="fixed">
+  <joint name="wsg_50_center_joint" type="fixed">
      <origin xyz="0 0 ${finger_length}" rpy="0 0 0" />      <!--origin xyz="-0.0067 0 0.049" rpy="0 0 0" /-->
-     <parent link="${name}_base_link"/>
-     <child link="${name}_center" />
+     <parent link="wsg_50_base_link"/>
+     <child link="wsg_50_center" />
   </joint>
 
 
-  <link name="${name}_center">
+  <link name="wsg_50_center">
   </link>
 
   <!-- GRIPPER LEFT -->
-  <joint name="${name}_finger_left_joint" type="prismatic">
+  <joint name="wsg_50_finger_left_joint" type="prismatic">
      <limit lower="-0.055" upper="-0.0027" effort="1.0" velocity="1.0"/>
      <origin xyz="0 0 0" rpy="0 0 0" />      <!--origin xyz="-0.0067 0 0.049" rpy="0 0 0" /-->
-     <parent link="${name}_base_link"/>
-     <child link="${name}_gripper_left" />
+     <parent link="wsg_50_base_link"/>
+     <child link="wsg_50_gripper_left" />
      <dynamics friction="100" damping="100" />
      <axis xyz="1 0 0"/>
      <limit effort="100" velocity="100"/>
   </joint>
 
-  <transmission name="${name}_base_trans_left" type="pr2_mechanism_model/SimpleTransmission">
-     <actuator name="${name}_base_motor_left" />
-     <joint name="${name}_base_joint_gripper_left" />
+  <transmission name="wsg_50_base_trans_left" type="pr2_mechanism_model/SimpleTransmission">
+     <actuator name="wsg_50_base_motor_left" />
+     <joint name="wsg_50_base_joint_gripper_left" />
      <mechanicalReduction>1</mechanicalReduction>
      <motorTorqueConstant>1</motorTorqueConstant>
   </transmission>
 
-  <link name="${name}_gripper_left">
+  <link name="wsg_50_gripper_left">
       <inertial>
           <mass value="0.1" />
           <origin xyz="0 0 0" />
@@ -110,23 +110,23 @@
      <contact_coefficients kd="1.0" kp="1000.0" mu="0"/>
   </link>
 
-  <gazebo reference="${name}_gripper_left">
+  <gazebo reference="wsg_50_gripper_left">
     <material>Gazebo/Blue</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
 
 
   <!-- LEFT FINGER -->
-  <joint name="${name}_guide_joint_finger_left" type="fixed">
+  <joint name="wsg_50_guide_joint_finger_left" type="fixed">
      <origin xyz="${finger_tip} 0 ${finger_length}" rpy="0 0 0" />
-     <parent link="${name}_gripper_left"/>
-     <child link="${name}_finger_left" />
+     <parent link="wsg_50_gripper_left"/>
+     <child link="wsg_50_finger_left" />
      <dynamics friction="100" damping="100" />
      <axis xyz="1 0 0"/>
      <limit effort="100" velocity="100"/>
   </joint>
 
-  <link name="${name}_finger_left">
+  <link name="wsg_50_finger_left">
       <inertial>
           <mass value="0.1" />
           <origin xyz="0 0 0" />
@@ -154,7 +154,7 @@
      <contact_coefficients kd="1.0" kp="1000.0" mu="0"/>
   </link>
 
-  <gazebo reference="${name}_finger_left">
+  <gazebo reference="wsg_50_finger_left">
     <material>Gazebo/Blue</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
@@ -162,24 +162,24 @@
 
   <!-- GRIPPER RIGHT -->
 
-  <joint name="${name}_finger_right_joint" type="prismatic">
+  <joint name="wsg_50_finger_right_joint" type="prismatic">
      <limit lower="0.0027" upper="0.055" effort="1.0" velocity="1.0"/>
      <origin xyz="0 0 0" rpy="0 0 3.14159" />
-     <parent link="${name}_base_link"/>
-     <child link="${name}_gripper_right" />
+     <parent link="wsg_50_base_link"/>
+     <child link="wsg_50_gripper_right" />
      <axis xyz="-1 0 0"/>
      <dynamics friction="100" damping="100" />
      <limit effort="100" velocity="100"/>
   </joint>
 
-  <transmission name="${name}_base_trans_right" type="pr2_mechanism_model/SimpleTransmission">
-     <actuator name="${name}_base_motor_right" />
-     <joint name="${name}_base_joint_gripper_right" />
+  <transmission name="wsg_50_base_trans_right" type="pr2_mechanism_model/SimpleTransmission">
+     <actuator name="wsg_50_base_motor_right" />
+     <joint name="wsg_50_base_joint_gripper_right" />
      <mechanicalReduction>1</mechanicalReduction>
      <motorTorqueConstant>1</motorTorqueConstant>
   </transmission>
 	
-    <link name="${name}_gripper_right">
+    <link name="wsg_50_gripper_right">
       <inertial>
           <mass value="0.1" />
           <origin xyz="0 0 0" />
@@ -216,16 +216,16 @@
 
   <!-- RIGHT FINGER -->
 
-  <joint name="${name}_guide_joint_finger_right" type="fixed">
+  <joint name="wsg_50_guide_joint_finger_right" type="fixed">
      <origin xyz="${finger_tip} 0 ${finger_length}" rpy="0 0 0" />
-     <parent link="${name}_gripper_right"/>
-     <child link="${name}_finger_right" />
+     <parent link="wsg_50_gripper_right"/>
+     <child link="wsg_50_finger_right" />
      <dynamics friction="100" damping="100" />
      <axis xyz="1 0 0"/>
      <limit effort="100" velocity="100"/>
   </joint>
 
-  <link name="${name}_finger_right">
+  <link name="wsg_50_finger_right">
       <inertial>
           <mass value="0.1" />
           <origin xyz="0 0 0" />
@@ -253,7 +253,7 @@
      <contact_coefficients kd="1.0" kp="1000.0" mu="0"/>
   </link>
 
-  <gazebo reference="${name}_finger_right">
+  <gazebo reference="wsg_50_finger_right">
     <material>Gazebo/White</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
@@ -261,4 +261,3 @@
 </xacro:macro>
 
 </robot>
-

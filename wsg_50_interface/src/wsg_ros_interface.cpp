@@ -66,7 +66,7 @@ namespace wsg_50_interface
   std::vector<hardware_interface::StateInterface> WSG50HardwareInterface::export_state_interfaces()
   {
     std::vector<hardware_interface::StateInterface> state_interfaces;
-    state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_POSITION, &wsg_.width_);
+    state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_POSITION, &wsg_.negative_width_);
     state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_VELOCITY, &wsg_.speed_);
     state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_EFFORT, &wsg_.force_);
     return state_interfaces;
@@ -82,6 +82,7 @@ namespace wsg_50_interface
   hardware_interface::return_type WSG50HardwareInterface::read(const rclcpp::Time & time, const rclcpp::Duration & period)
   {
     // Read made by the thread
+    wsg_.negative_width_ = wsg_.width_/2.0;
     return hardware_interface::return_type::OK;
   }
 
@@ -94,7 +95,7 @@ namespace wsg_50_interface
         mode_=1;//grasp
       else
         mode_=2;//release
-      if (wsg_.cmd(wsg_.goal_width_, wsg_.goal_speed_,mode_) != 0)
+      if (wsg_.cmd(wsg_.goal_width_*2.0, wsg_.goal_speed_,mode_) != 0)
       {
         RCLCPP_ERROR(rclcpp::get_logger("WSG50HardwareInterface"), "Failed to send move command");
         return hardware_interface::return_type::ERROR;

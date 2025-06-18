@@ -41,9 +41,6 @@ def launch_setup(context):
           "real_hardware:=",
           "false ",
           " ",
-          "sim_standalone:=",
-          "true ",
-          " ",
       ]
   )
   robot_description = {'robot_description':  ParameterValue(value=robot_description_content, value_type=str)}
@@ -101,7 +98,7 @@ def launch_setup(context):
           'wsg_50_controllers.launch.py',
           ])
       ]),
-      launch_arguments={'prefix': "", 'controller_file': PathJoinSubstitution([FindPackageShare('wsg_50_simulation'), 'controllers', 'wsg_50_standalone.yaml']), 'standalone': "true"}.items()
+      launch_arguments={'controller_file': PathJoinSubstitution([FindPackageShare('wsg_50_simulation'), 'controllers', 'wsg_50_standalone.yaml']), 'standalone': "true"}.items()
   )
   return [
     node_robot_state_publisher, 

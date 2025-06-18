@@ -73,7 +73,7 @@
 #define GRIPPER_MAX_OPEN 110.0
 #define GRIPPER_MIN_SPEED 0.0
 #define GRIPPER_MAX_SPEED 420.0
-#define GRIPPER_WIDTH_THRESHOLD 30
+#define GRIPPER_WIDTH_THRESHOLD 5
 
 #define MODE_MOVE 0
 #define MODE_GRASP 1
@@ -89,6 +89,7 @@ class WSG50Node : public rclcpp::Node{
             this->declare_parameter<double>("rate", 100.0); // Warning to the user if rate is too low the driver could not work properly !!
             this->declare_parameter<double>("grasping_force", 80.0);
             this->declare_parameter<bool>("finger_sensors", false);
+            this->declare_parameter<double>("initial_acceleration", 5000.0);
 
             this->get_parameter("ip", ip_);
             this->get_parameter("port", port_);
@@ -128,6 +129,17 @@ class WSG50Node : public rclcpp::Node{
                 set_acc_srv_ = this->create_service<wsg_50_common::srv::Conf>("set_acc", std::bind(&WSG50Node::setAccSrv, this, std::placeholders::_1, std::placeholders::_2));
                 ack_srv_ = this->create_service<std_srvs::srv::Trigger>("ack", std::bind(&WSG50Node::ackSrv, this, std::placeholders::_1, std::placeholders::_2));
 
+                double initial_acc;
+                this->get_parameter("initial_acceleration", initial_acc);
+
+                RCLCPP_INFO(this->get_logger(), "Setting initial acceleration to %.1f mm/s²", initial_acc);
+                int acc_result = setAcceleration(initial_acc);
+                if (acc_result >= 0) {
+                    RCLCPP_INFO(this->get_logger(), "Initial acceleration set successfully to %.1f mm/s²", initial_acc);
+                } else {
+                    RCLCPP_WARN(this->get_logger(), "Failed to set initial acceleration: %d", acc_result);
+                }
+
                 // Actions
                 move_action_server_ = rclcpp_action::create_server<wsg_50_common::action::Cmd>(
                     this,
@@ -146,7 +158,7 @@ class WSG50Node : public rclcpp::Node{
                     std::bind(&WSG50Node::position_topic_callback, this, std::placeholders::_1));
 
                 // Default values for topic interface
-                default_speed_ = 100.0;  // mm/s
+                default_speed_ = 420.0;  // mm/s
 
                 RCLCPP_INFO(this->get_logger(), "Topic interface enabled:");
                 RCLCPP_INFO(this->get_logger(), "  - wsg50/move (geometry_msgs/Point: x=width[mm], y=speed[mm/s], z=mode[0=move,1=grasp,2=release])");
@@ -186,6 +198,8 @@ class WSG50Node : public rclcpp::Node{
                         RCLCPP_ERROR(this->get_logger(), "Error while setting grasping force limit");
                     }
                 }
+                
+
                 RCLCPP_INFO(this->get_logger(), "Gripper ready.");
 
                 auto_update_thread_ = std::thread(std::bind(&WSG50Node::read_thread, this, (int)(1000.0 / rate_)));
@@ -453,12 +467,6 @@ class WSG50Node : public rclcpp::Node{
             // Prepare messages
             wsg_50_common::msg::Status status_msg;
             status_msg.status = "UNKNOWN";
-
-            sensor_msgs::msg::JointState joint_states;
-            joint_states.name.push_back("wsg50_width_joint");
-            joint_states.position.resize(1);
-            joint_states.velocity.resize(1);
-            joint_states.effort.resize(1);
 
             // Request automatic updates (error checking is done below)
             getOpening(interval_ms);

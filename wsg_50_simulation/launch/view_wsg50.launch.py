@@ -11,7 +11,7 @@ import os
 
 def generate_launch_description():
     
-    urdf_file = os.path.join(get_package_share_directory('wsg_50_simulation'),'urdf','wsg50.urdf.xacro')
+    urdf_file = os.path.join(get_package_share_directory('wsg_50_simulation'),'urdf','wsg_50.urdf')
     rviz_config_file = os.path.join(get_package_share_directory('wsg_50_simulation'),'rviz','wsg50.rviz')
 
     robot_description_content = Command(
@@ -23,19 +23,10 @@ def generate_launch_description():
             "real_hardware:=",
             "false ",
             " ",
-            "sim_standalone:=",
-            "true ",
-            " ",
         ]
     )
 
     robot_description = {"robot_description": robot_description_content}
-
-    driver = Node(
-        package='wsg_50_driver',
-        executable='wsg_50_driver',
-        output='both',
-    )
 
     # Robot state publisher
     node_robot_state_publisher = Node(
@@ -61,7 +52,6 @@ def generate_launch_description():
     )
     return LaunchDescription([
         node_robot_state_publisher,
-        driver,
         joint_state_publisher,
         rviz_node,
     ])

@@ -29,7 +29,7 @@ class WSG50GUI(Node):
         self.follow_mode = False
         self.last_follow_command_time = 0.0
         self.follow_command_rate = 0.05  # Send command every 200ms
-        self.follow_threshold = 1.0  # Only send if change > 1mm
+        self.follow_threshold = -1  # Only send if change > 1mm
         self.last_follow_width = 55.0
         
         self.get_logger().info('WSG-50 GUI Slider started')

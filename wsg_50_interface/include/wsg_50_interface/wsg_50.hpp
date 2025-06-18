@@ -37,6 +37,7 @@ class WSG50Driver{
         double rate_;
         double grasping_force_;
         double width_, speed_, force_;
+        double negative_width_;
         double goal_width_, goal_speed_;
         bool finger_sensors_;
         std::thread auto_update_thread_;
