@@ -58,9 +58,15 @@ bool WSG50Driver::disconnect(){
  * @note This function will homming or enable the gripper and set the grasping force limit and tare the finger sensors
  */
 bool WSG50Driver::setup(){
-    if (homing()){// Homing if it is not done that means the gripper is in error case
-        ack_fault(); // Acknowledge the fault
-        homing();   // Homing again
+    link_lost_ = false;
+    if (!homed_) {
+        if (homing()){// Homing if it is not done that means the gripper is in error case
+            ack_fault(); // Acknowledge the fault
+            homing();   // Homing again
+        }
+        homed_ = true;
+    } else {
+        ack_fault();  // reconnect: the gripper kept its homing; homing now would drop a held part
     }
     rclcpp::sleep_for(std::chrono::milliseconds(500));  // Wait for the gripper to be ready
     if (grasping_force_ > 0.0) { // Set the grasping force limit if it is greater than 0
@@ -115,7 +121,16 @@ void WSG50Driver::read_thread(int interval_ms){
     while(connected_==1){
         msg_free(&msg);
         res = msg_receive( &msg );
-        if (res < 0 || msg.len < 2) {
+        if (res < 0) {
+            // Receive timeout (no status for TCP_RCV_TIMEOUT_SEC, though updates stream every
+            // interval_ms) or a dead socket: the link is gone. read() reports it as an error.
+            if (connected_ == 1) {
+                RCLCPP_ERROR(rclcpp::get_logger("WSG50Driver"), "Gripper link lost");
+                link_lost_ = true;
+            }
+            break;
+        }
+        if (msg.len < 2) {
             continue;
         }
 

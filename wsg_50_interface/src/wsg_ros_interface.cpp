@@ -45,6 +45,11 @@ namespace wsg_50_interface
   hardware_interface::CallbackReturn WSG50HardwareInterface::on_activate(const rclcpp_lifecycle::State &)
   {
     RCLCPP_INFO(rclcpp::get_logger("WSG50HardwareInterface"), "Activating WSG50");
+    if (wsg_.auto_update_thread_.joinable()) {  // leftover from a lost link (see on_error)
+      wsg_.disconnect();
+    } else if (cmd_is_connected()) {  // an earlier attempt connected but never started the thread
+      cmd_disconnect();
+    }
 
     try {
       if (!wsg_.connect()) {
@@ -81,6 +86,9 @@ namespace wsg_50_interface
 
   hardware_interface::return_type WSG50HardwareInterface::read(const rclcpp::Time & time, const rclcpp::Duration & period)
   {
+    if (wsg_.link_lost_) {
+      return hardware_interface::return_type::ERROR;  // -> on_error -> unconfigured
+    }
     // Read made by the thread
     wsg_.negative_width_ = wsg_.width_/2.0;
     return hardware_interface::return_type::OK;
@@ -119,6 +127,18 @@ namespace wsg_50_interface
       return hardware_interface::CallbackReturn::ERROR;
     }
 
+    return hardware_interface::CallbackReturn::SUCCESS;
+  }
+
+  // A lost link (or failed command) lands here. The lifecycle default fails and finalizes the
+  // component; succeeding leaves it unconfigured so configure -> activate reconnects it
+  // (hw_reconnect.py). This runs in the control loop that also streams to the arm, so it only
+  // flags the link: joining a read thread still blocked in recv() would stall that loop for up
+  // to TCP_RCV_TIMEOUT_SEC. on_activate cleans up before reconnecting.
+  hardware_interface::CallbackReturn WSG50HardwareInterface::on_error(const rclcpp_lifecycle::State &)
+  {
+    RCLCPP_WARN(rclcpp::get_logger("WSG50HardwareInterface"), "Gripper link lost; unconfigured, awaiting reconnect.");
+    wsg_.connected_ = 0;
     return hardware_interface::CallbackReturn::SUCCESS;
   }
 

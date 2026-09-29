@@ -7,6 +7,7 @@
 #include <string.h>
 #include <assert.h>
 #include <thread>
+#include <atomic>
 #include <chrono>
 
 
@@ -41,7 +42,9 @@ class WSG50Driver{
         double goal_width_, goal_speed_;
         bool finger_sensors_;
         std::thread auto_update_thread_;
-        int connected_;
+        std::atomic<int> connected_{0};
+        std::atomic<bool> link_lost_{false};  // set by read_thread when the link dies
+        bool homed_ = false;                   // home once per process, not on every reconnect
 
 
         WSG50Driver();

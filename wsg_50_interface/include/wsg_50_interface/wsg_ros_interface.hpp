@@ -36,6 +36,7 @@ public:
   hardware_interface::return_type write(const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
   hardware_interface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State &) override;
+  hardware_interface::CallbackReturn on_error(const rclcpp_lifecycle::State &) override;
 
 
 

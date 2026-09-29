@@ -60,7 +60,9 @@
 // Macros
 //------------------------------------------------------------------------
 
-#define TCP_RCV_TIMEOUT_SEC					60
+// 5 s, not 60: this is how long a dead link goes unnoticed. It must still outlast the
+// silence while a blocking command (homing, ~3 s) runs.
+#define TCP_RCV_TIMEOUT_SEC					5
 
 //------------------------------------------------------------------------
 // Typedefs, enums, structs
@@ -81,7 +83,10 @@ const interface_t tcp =
 };
 
 static tcp_conn_t conn;
-static pthread_mutex_t comm_mutex = PTHREAD_MUTEX_INITIALIZER;
+static pthread_mutex_t comm_mutex = PTHREAD_MUTEX_INITIALIZER;	// writers
+// Readers get their own lock: holding the writers' lock across a blocking recv() stalled every
+// send (and so the ros2_control loop calling it) until the next message arrived.
+static pthread_mutex_t read_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 
 
@@ -165,16 +170,16 @@ int tcp_read( unsigned char *buf, unsigned int len )
     if ( conn.sock <= 0 || buf == NULL ) return -1;
     if ( len == 0 ) return 0;
 
-	// Wait for communication mutex
-    pthread_mutex_lock(&comm_mutex);
+    pthread_mutex_lock(&read_mutex);
 	// Read desired number of bytes
 	res = recv( conn.sock, buf, len, 0 );
-	// Release communication mutex
-	pthread_mutex_unlock(&comm_mutex);
-	if ( res < 0 )
+	pthread_mutex_unlock(&read_mutex);
+	// Timeout, error or peer closed: report it. quit() used to exit() here, which from inside
+	// ros2_control_node took the arm down with the gripper.
+	if ( res <= 0 )
 	{
-		close( conn.sock );
-		quit( "Failed to read data from TCP socket\n" );
+		fprintf( stderr, "Failed to read data from TCP socket\n" );
+		return -1;
 	}
 
     return res;
@@ -200,7 +205,7 @@ int tcp_write( unsigned char *buf, unsigned int len )
 
 	// Wait for communication mutex
 	pthread_mutex_lock(&comm_mutex);
-	res = send( conn.sock, buf, len, 0 );
+	res = send( conn.sock, buf, len, MSG_NOSIGNAL );	// EPIPE, not SIGPIPE, on a dead link
 	// Release communication mutex
 	pthread_mutex_unlock(&comm_mutex);
     if ( res >= 0 ) return( res );

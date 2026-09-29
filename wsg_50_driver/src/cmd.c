@@ -335,6 +335,7 @@ void cmd_disconnect( void )
 	if ( res > 0 ) free( resp );
 
 	msg_close();
+	connected = false;	// without this every later cmd_connect_*() returns -1: no reconnect
 }
 
 

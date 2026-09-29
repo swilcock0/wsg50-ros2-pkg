@@ -110,6 +110,7 @@ int msg_receive( msg_t *msg )
 	while( sync != MSG_PREAMBLE_LEN )
 	{
 		res = interface->read( header, 1 );
+		if ( res < 0 ) return -1;	// dead link: without this the sync loop spins forever
 		if ( header[0] == MSG_PREAMBLE_BYTE ) sync++;
 	}
 
@@ -199,8 +200,11 @@ int msg_send( msg_t *msg )
 		res = interface->write( buf, 6 + msg->len + 2 );
         if ( res < 6 + (int)msg->len + 2 )
 		{
-			interface->close();
-			quit( "Failed to submit message checksum" );
+			// Report, don't exit(): callers (cmd_submit) already handle -1, and the owner closes
+			// the link. Closing here as well would close fd 0 on the owner's second close.
+			fprintf( stderr, "Failed to submit message checksum\n" );
+			free( buf );
+			return -1;
 		}
 
 		free( buf );
