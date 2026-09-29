@@ -1,5 +1,5 @@
 gripper_name: "wsg"
-ip_address: "192.168.1.20"
+ip_address: "192.168.150.140"  # not read: the node declares "ip", default already this
 port: 1000
 protocol: "tcp"
 local_port: 1501
