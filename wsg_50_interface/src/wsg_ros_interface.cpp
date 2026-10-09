@@ -2,7 +2,7 @@
 namespace wsg_50_interface
 {
 
-  WSG50HardwareInterface::WSG50HardwareInterface(): wsg_(), last_goal_position_(0.0),mode_(0){}
+  WSG50HardwareInterface::WSG50HardwareInterface(): wsg_(), mode_(0){}
 
   WSG50HardwareInterface::~WSG50HardwareInterface(){}
 
@@ -23,6 +23,14 @@ namespace wsg_50_interface
     wsg_.grasping_force_ = std::stod(info.hardware_parameters.at("grasping_force"));
     wsg_.goal_speed_ = std::stod(info.hardware_parameters.at("speed"));
     wsg_.finger_sensors_ = (info.hardware_parameters.at("finger_sensors") == "true");
+    // A WSG grasp takes the expected part width and faults (Axis is blocked) on contact far
+    // outside it, so a close grasps at the part's width rather than at the commanded goal.
+    auto part_width = info.hardware_parameters.find("grasp_part_width");
+    if (part_width != info.hardware_parameters.end()) {
+      grasp_part_width_mm_ = std::stod(part_width->second);
+    }
+    RCLCPP_INFO(rclcpp::get_logger("WSG50HardwareInterface"), "Grasp part width: %.1f mm%s",
+                grasp_part_width_mm_, grasp_part_width_mm_ > 0.0 ? "" : " (unset: grasp at the goal)");
 
     // Check the communication protocol
     if (wsg_.protocol_ == "udp")
@@ -72,7 +80,7 @@ namespace wsg_50_interface
   {
     std::vector<hardware_interface::StateInterface> state_interfaces;
     state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_POSITION, &wsg_.negative_width_);
-    state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_VELOCITY, &wsg_.speed_);
+    state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_VELOCITY, &finger_speed_);
     state_interfaces.emplace_back(wsg_.name_, hardware_interface::HW_IF_EFFORT, &wsg_.force_);
     return state_interfaces;
   }
@@ -91,27 +99,51 @@ namespace wsg_50_interface
     }
     // Read made by the thread
     wsg_.negative_width_ = wsg_.width_/2.0;
+    finger_speed_ = wsg_.speed_/2.0;
     return hardware_interface::return_type::OK;
   }
 
   hardware_interface::return_type WSG50HardwareInterface::write(const rclcpp::Time & time, const rclcpp::Duration & period)
   {
-
-    if (std::isnan(last_goal_position_) || std::abs(wsg_.goal_width_ - last_goal_position_) > 1e-4)
-    { 
-      if (wsg_.goal_width_ < last_goal_position_)
-        mode_=1;//grasp
-      else
-        mode_=2;//release
-      if (wsg_.cmd(wsg_.goal_width_*2.0, wsg_.goal_speed_,mode_) != 0)
-      {
-        RCLCPP_ERROR(rclcpp::get_logger("WSG50HardwareInterface"), "Failed to send move command");
-        return hardware_interface::return_type::ERROR;
-      }
-      std::cout << "Sending command to gripper: " << wsg_.goal_width_ << std::endl;
-      last_goal_position_ = wsg_.goal_width_;
+    if (std::isnan(wsg_.goal_width_) ||
+        (!std::isnan(last_goal_position_) && std::abs(wsg_.goal_width_ - last_goal_position_) <= 1e-4))
+    {
+      return hardware_interface::return_type::OK;
     }
 
+    const double goal_mm = wsg_.goal_width_ * 2.0 * 1000.0;  // per finger m -> full jaw mm
+    const int state = wsg_.grasp_state_;
+    // Gripping, no part found, part lost or holding: the grasp still owns the fingers until a
+    // release, and the gripper refuses a move or a new grasp until then.
+    const bool grasped = grasp_sent_ || (state >= 1 && state <= 4);
+    double width_mm = goal_mm;
+
+    if (grasp_part_width_mm_ > 0.0) {
+      if (goal_mm < grasp_part_width_mm_) {
+        if (grasped) {  // already closed on it; a second close goal changes nothing
+          last_goal_position_ = wsg_.goal_width_;
+          return hardware_interface::return_type::OK;
+        }
+        mode_ = 1;  // grasp
+        width_mm = grasp_part_width_mm_;
+      } else {
+        mode_ = grasped ? 2 : 0;  // release if holding, else move
+      }
+    } else {
+      // No part width: the old rule, close vs open against the last goal
+      mode_ = (!std::isnan(last_goal_position_) && wsg_.goal_width_ < last_goal_position_) ? 1 : 2;
+    }
+
+    static const char * names[] = {"move", "grasp", "release"};
+    RCLCPP_INFO(rclcpp::get_logger("WSG50HardwareInterface"), "Gripper %s to %.1f mm (goal %.1f mm, grasp state %d)",
+                names[mode_], width_mm, goal_mm, state);
+    if (wsg_.cmd(width_mm / 1000.0, wsg_.goal_speed_, mode_) != 0)
+    {
+      RCLCPP_ERROR(rclcpp::get_logger("WSG50HardwareInterface"), "Failed to send %s command", names[mode_]);
+      return hardware_interface::return_type::ERROR;
+    }
+    grasp_sent_ = (mode_ == 1);
+    last_goal_position_ = wsg_.goal_width_;
     return hardware_interface::return_type::OK;
   }
   hardware_interface::CallbackReturn WSG50HardwareInterface::on_deactivate(const rclcpp_lifecycle::State &)

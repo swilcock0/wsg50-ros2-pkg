@@ -46,6 +46,11 @@ private:
   double last_goal_position_ = std::numeric_limits<double>::quiet_NaN();
   double last_goal_speed_ = std::numeric_limits<double>::quiet_NaN();
   int mode_;
+  // Full jaw (mm) at which the part is gripped; a goal inside it grasps there. 0 (parameter
+  // unset): the old rule, closing grasps at the goal and opening releases.
+  double grasp_part_width_mm_ = 0.0;
+  bool grasp_sent_ = false;  // a grasp was sent and no release since
+  double finger_speed_ = 0.0;  // per finger, m/s, like the position
 };
 }
 
